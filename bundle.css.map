@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../StartScreen.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n    const posters = [\n        {\n            title: 'synesthesia',\n            src: 'img/img1.jpg',\n        },\n        {\n            title: 'RTI',\n            src: 'img/img2.jpg',\n        },\n        {\n            title: 'AIWS',\n            src: 'img/img3.jpg',\n        }\n    ];\n</script>\n\n<style>\n    .wrapper {\n        display: flex;\n    }\n\n    .poster {\n        display: flex;\n        justify-content: center;\n        width: 33%;\n    }\n\n    .poster img {\n        width: 90%;\n    }\n</style>\n\n<div class=\"wrapper\">\n    {#each posters as poster}\n        <div class=\"poster\">\n            <!-- <p>{poster.title}</p> -->\n            <img src={poster.src} alt={poster.title} />\n        </div>\n    {/each}\n</div>"
+  ],
+  "names": [],
+  "mappings": "AAkBI,QAAQ,8BAAC,CAAC,AACN,OAAO,CAAE,IAAI,AACjB,CAAC,AAED,OAAO,8BAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,KAAK,CAAE,GAAG,AACd,CAAC,AAED,sBAAO,CAAC,GAAG,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,AACd,CAAC"
+}
