@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import StartScreen from "./StartScreen.svelte";
+  import Header from "./Header.svelte";
   // import UserSearch from "./UserSearch.svelte";
 
   // create a variable to store our users
@@ -37,6 +38,8 @@
     {/each}
   </ul>
   {/if} -->
+
+  <Header />
 
   <StartScreen />
   

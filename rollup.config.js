@@ -51,7 +51,7 @@ export default {
       targets: [
         { src: 'src/index.html', dest: 'public' },
         // { src: ['assets/fonts/arial.woff', 'assets/fonts/arial.woff2'], dest: 'dist/public/fonts' },
-        { src: 'src/img/**/*', dest: 'public/img' }
+        { src: 'src/static', dest: 'public' },
       ]
     })
   ]

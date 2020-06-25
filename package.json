@@ -6,7 +6,7 @@
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
-    "start": "sirv public",
+    "start": "rm -r public && mkdir public && npm run build && npm run dev",
     "start:dev": "sirv public --dev",
     "deploy": "npm run build && gh-pages -d public"
   },
