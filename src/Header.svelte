@@ -1,9 +1,15 @@
 <script>
+    import Menu from "./Menu/Menu.svelte";
+    import MenuButton from "./Menu/MenuButton.svelte";
+
+    let showMenu = false;
+
+    const onMenuButtonClick = () => showMenu = !showMenu;
 
 </script>
 
 <style>
-    .wrapper {
+    .header {
         position: relative;
         display: flex;
         justify-content: center;
@@ -19,9 +25,23 @@
         height: 220px;
         top: -70px;
     }
+
+    .menu_button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
 </style>
 
-<div class="wrapper">
+<div class="header">
     <img class="header_logo" src="static/logo/black_tittel1.png" alt="" />
     <img class="header_logo" src="static/logo/black_tittel2 destort.png" alt="" />
+
+    <div class="menu_button">
+        <MenuButton onClick={onMenuButtonClick} color={'black'}/>
+    </div>
+
+    {#if (showMenu)}
+        <Menu onCloseClick={onMenuButtonClick} />
+    {/if}
 </div>

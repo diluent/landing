@@ -23,7 +23,15 @@
 </script>
 
 <style>
+  @font-face {
+    font-family: "TGPraktikal";
+    src: url("static/fonts/TGPraktikal-Medium.otf");
+  }
 </style>
+
+<header>
+  <Header />
+</header>
 
 <main>
 
@@ -38,8 +46,6 @@
     {/each}
   </ul>
   {/if} -->
-
-  <Header />
 
   <StartScreen />
   
