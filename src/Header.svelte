@@ -10,7 +10,7 @@
 
 <style>
     .header {
-        position: relative;
+        position: fixed;
         display: flex;
         justify-content: center;
         top: 0;
@@ -18,6 +18,7 @@
         height: 100px;
         width: 100%;
         background-color: #fff;
+        z-index: 1;
     }
 
     .header_logo {
@@ -37,11 +38,11 @@
     <img class="header_logo" src="static/logo/black_tittel1.png" alt="" />
     <img class="header_logo" src="static/logo/black_tittel2 destort.png" alt="" />
 
-    <div class="menu_button">
-        <MenuButton onClick={onMenuButtonClick} color={'black'}/>
-    </div>
-
     {#if (showMenu)}
         <Menu onCloseClick={onMenuButtonClick} />
+    {:else}
+        <div class="menu_button">
+            <MenuButton onClick={onMenuButtonClick} color={'black'}/>
+        </div>
     {/if}
 </div>

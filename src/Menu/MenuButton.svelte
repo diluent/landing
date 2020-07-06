@@ -18,6 +18,10 @@
         background: rgba(0, 0, 0, .4);
         z-index: 1; */
     }
+
+    .menuButton:hover {
+        transform: rotate(3deg);
+    }
 </style>
 
 <div class="menuButton" on:click={onClick}>

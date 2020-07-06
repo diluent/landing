@@ -1,6 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import StartScreen from "./StartScreen.svelte";
+  import SecondScreen from "./components/SecondScreen.svelte";
+  // import ThirdScreen from "./ThirdScreen.svelte";
   import Header from "./Header.svelte";
   // import UserSearch from "./UserSearch.svelte";
 
@@ -27,6 +29,10 @@
     font-family: "TGPraktikal";
     src: url("static/fonts/TGPraktikal-Medium.otf");
   }
+
+  header {
+    height: 100px;
+  }
 </style>
 
 <header>
@@ -48,5 +54,7 @@
   {/if} -->
 
   <StartScreen />
+  <SecondScreen />
+  <!-- <ThirdScreen /> -->
   
 </main>

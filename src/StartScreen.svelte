@@ -24,6 +24,7 @@
 <style>
     .wrapper {
         display: flex;
+        height: calc(100vh - 100px);
     }
 
     .poster {
