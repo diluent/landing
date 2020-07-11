@@ -44,10 +44,8 @@
 
   {#if currentPage == null || currentPage === 'home'}
     <StartScreen />
-  {/if}
-  
-  {#if currentPage === 'theRoomTiltIllusion'}
-    <SecondScreen />
+  {:else}
+    <SecondScreen poster={currentPage}/>
   {/if}
   <!-- <ThirdScreen /> -->
   

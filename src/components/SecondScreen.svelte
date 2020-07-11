@@ -1,26 +1,23 @@
 <script>
-    const posters = [
-        // {
-        //     title: 'AIWS',
-        //     logo: 'static/gif/AIWS transp from Encoder.gif',
-        //     banner: 'static/banners/AIWS banner wide.png',
-        //     bannerBlur: 'static/banners/AIWS banner wide blur.png',
-        // },
-        // {
-        //     title: 'SYN',
-        //     logo: 'static/gif/SYN transp from Encoder.gif',
-        //     banner: 'static/banners/SYN banner wide.png',
-        //     bannerBlur: 'static/banners/SYN banner wide blur.png',
-        // },
-        {
+    export let poster;
+
+    const posters = {
+        aliceInWonderland: {
+            title: 'AIWS',
+            logo: 'static/gif/AIWS transp from Encoder.gif',
+            banner: 'static/banners/AIWS banner wide.png',
+        },
+        synthesia: {
+            title: 'SYN',
+            logo: 'static/gif/SYN transp from Encoder.gif',
+            banner: 'static/banners/SYN banner wide.png',
+        },
+        theRoomTiltIllusion: {
             title: 'RTI',
             logo: 'static/gif/RTI Transp from Encoder.gif',
             banner: 'static/banners/RTI banner wide.png',
-            // bannerBlur: 'static/banners/RTI banner wide blur.png',
         },
-    ];
-
-    const poster = posters[0];
+    };
 </script>
 
 <style>
@@ -60,10 +57,10 @@
 
 <div class="wrapper">
     <div class="poster_background">
-        <img class="poster_left" src={poster.banner} alt='' />
-        <img class="poster_right" src={poster.banner} alt='' />
+        <img class="poster_left" src={posters[poster].banner} alt='' />
+        <img class="poster_right" src={posters[poster].banner} alt='' />
     </div>
     <div class="poster_logo_wrapper">
-        <img class="poster_logo" src={poster.logo} alt='' />
+        <img class="poster_logo" src={posters[poster].logo} alt='' />
     </div>
 </div>
