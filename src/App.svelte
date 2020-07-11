@@ -4,24 +4,13 @@
   import SecondScreen from "./components/SecondScreen.svelte";
   // import ThirdScreen from "./ThirdScreen.svelte";
   import Header from "./Header.svelte";
-  // import UserSearch from "./UserSearch.svelte";
-
-  // create a variable to store our users
-  let users;
 
   // run this when the app starts
-  onMount(() => {
-    getGitHubUsers();
-  });
+  onMount(() => {});
 
-  /**
-   * Grab users from GitHub
-   */
-  function getGitHubUsers() {
-    fetch("https://api.github.com/users")
-      .then(resp => resp.json())
-      .then(data => (users = data));
-  }
+  let currentPage = null;
+
+  const onMenuElementClick = page => currentPage = page;
 </script>
 
 <style>
@@ -36,7 +25,7 @@
 </style>
 
 <header>
-  <Header />
+  <Header onMenuElementClick={onMenuElementClick} />
 </header>
 
 <main>
@@ -53,8 +42,13 @@
   </ul>
   {/if} -->
 
-  <StartScreen />
-  <SecondScreen />
+  {#if currentPage == null || currentPage === 'home'}
+    <StartScreen />
+  {/if}
+  
+  {#if currentPage === 'theRoomTiltIllusion'}
+    <SecondScreen />
+  {/if}
   <!-- <ThirdScreen /> -->
   
 </main>

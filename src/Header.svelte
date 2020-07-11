@@ -2,6 +2,8 @@
     import Menu from "./Menu/Menu.svelte";
     import MenuButton from "./Menu/MenuButton.svelte";
 
+    export let onMenuElementClick;
+
     let showMenu = false;
 
     const onMenuButtonClick = () => showMenu = !showMenu;
@@ -39,7 +41,7 @@
     <img class="header_logo" src="static/logo/black_tittel2 destort.png" alt="" />
 
     {#if (showMenu)}
-        <Menu onCloseClick={onMenuButtonClick} />
+        <Menu onCloseClick={onMenuButtonClick} onMenuElementClick={onMenuElementClick} />
     {:else}
         <div class="menu_button">
             <MenuButton onClick={onMenuButtonClick} color={'black'}/>
