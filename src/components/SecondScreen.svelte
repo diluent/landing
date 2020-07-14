@@ -21,7 +21,13 @@
 </script>
 
 <style>
-    .wrapper {
+
+    .row {
+        padding: 40px 20px;
+        display: flex;
+    }
+
+    .second_screen_banner_wrapper {
         height: calc(100vh - 100px);
         position: relative;
     }
@@ -53,14 +59,54 @@
         transform: scaleX(-1);
         width: 50vw;
     }
+
+    .video1 {
+        width: 100%;
+    }
 </style>
 
-<div class="wrapper">
-    <div class="poster_background">
-        <img class="poster_left" src={posters[poster].banner} alt='' />
-        <img class="poster_right" src={posters[poster].banner} alt='' />
+<div>
+    <div class="second_screen_banner_wrapper">
+        <div class="poster_background">
+            <img class="poster_left" src={posters[poster].banner} alt='' />
+            <img class="poster_right" src={posters[poster].banner} alt='' />
+        </div>
+        <div class="poster_logo_wrapper">
+            <img class="poster_logo" src={posters[poster].logo} alt='' />
+        </div>
     </div>
-    <div class="poster_logo_wrapper">
-        <img class="poster_logo" src={posters[poster].logo} alt='' />
+
+    <div class="row">
+        <div style="width: 60%; margin-right: 20px;">
+            <video
+                style="width: 100%;"
+                src="static/videos/1.mp4"
+                type="video/mp4"
+                muted
+                autoplay
+                loop
+            />
+        </div>
+        <div>What is synesthesia?</div>
+    </div>
+
+    <div class="row">
+        <div style="width: 25%; overflow: hidden; position: relative; margin-right: 40px; margin-left: 250px;">
+            <video
+                style="width: 1200px; position: absolute; left: -430px;" 
+                src="static/videos/2.mp4"
+                type="video/mp4"
+                muted
+                autoplay
+                loop
+            />
+        </div>
+        <div style="width: 75%;">
+            <div style="padding: 20px 40px 20px 20px; text-align: right;">The causes of the phenomenon</div>
+            <div>
+                <img src="static/screen2/2.png" alt="" />
+            </div>
+        </div>
+
     </div>
 </div>

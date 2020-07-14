@@ -8,7 +8,7 @@
   // run this when the app starts
   onMount(() => {});
 
-  let currentPage = null;
+  let currentPage = null; //'synthesia';//
 
   const onMenuElementClick = page => currentPage = page;
 </script>
@@ -17,6 +17,12 @@
   @font-face {
     font-family: "TGPraktikal";
     src: url("static/fonts/TGPraktikal-Medium.otf");
+  }
+
+  main {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'TGPraktikal';
   }
 
   header {
