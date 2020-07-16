@@ -90,7 +90,7 @@
         <div>What is synesthesia?</div>
     </div>
 
-    <div class="row">
+    <div class="row" style="padding: 0 20px;">
         <div style="width: 25%; overflow: hidden; position: relative; margin-right: 40px; margin-left: 250px;">
             <video
                 style="width: 1200px; position: absolute; left: -430px;" 
@@ -107,6 +107,31 @@
                 <img src="static/screen2/2.png" alt="" />
             </div>
         </div>
+    </div>
 
+    <div class="row">
+        <div style="width: 60%;">
+            <div style="padding-bottom: 40px; padding-left: 20px;">How many synaesthetes are there in the world?</div>
+            <div>
+                <video
+                    style="width: 100%;"
+                    src="static/videos/5.mp4"
+                    type="video/mp4"
+                    muted
+                    autoplay
+                    loop
+                />
+            </div>
+        </div>
+        
+        <div style="width: 40%;margin-top: -40px; padding-left: 40px;">
+            <div style="padding-left: 40px;">How does it feel to be a synaesthete?</div>
+            <div>
+                <div>
+                    <img src="static/screen2/4.png" alt="" />
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>
